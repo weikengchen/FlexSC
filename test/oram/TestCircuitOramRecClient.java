@@ -1,5 +1,6 @@
 package oram;
 
+import java.util.concurrent.TimeUnit;
 import oram.TestCircuitOramRec.EvaRunnable;
 import flexsc.Flag;
 
@@ -12,6 +13,8 @@ public class TestCircuitOramRecClient {
 			eva.run();
 			Flag.sw.print();
 			System.out.print("\n");
+			
+			TimeUnit.SECONDS.sleep(1);
 		}
 	}
 }
