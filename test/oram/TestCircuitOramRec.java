@@ -150,9 +150,7 @@ public class TestCircuitOramRec {
 					 Flag.sw.stopTotal();
 					 
 					if(i != 0) Flag.sw.addCounter();
-					printStatistic();
 				}
-
 				disconnect();
 			} catch (Exception e) {
 				e.printStackTrace();
