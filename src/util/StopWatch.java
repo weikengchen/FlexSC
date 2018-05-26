@@ -119,7 +119,7 @@ public class StopWatch {
 	public void print() {
 		System.out
 				.println("Total Time \t GC CPU Time\t GCIO Time\t OTCPU Time\t OTIO Time\n");
-		System.out.println(elapsedTimeTotal / 1000000000.0 / counter + "\t"
+		System.out.println(elapsedTimeTotal / 1000000000.0 / counter + "(" + counter + ")" +"\t"
 				+ (elapsedTimeGC - elapsedTimeGCIO) / 1000000000.0 / counter
 				+ "\t" + elapsedTimeGCIO / 1000000000.0 / counter + " "
 				+ (elapsedTimeOT - elapsedTimeOTIO) / 1000000000.0 / counter
