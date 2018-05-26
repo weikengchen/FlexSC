@@ -131,6 +131,8 @@ public class TestCircuitOramRec {
 				int capacity = is.read();
 				int dataSize = is.read();
 
+				int dataSize = 4096;
+
 				int N = 1 << logN;
 				System.out
 						.println("\nlogN recurFactor  cutoff capacity dataSize");
