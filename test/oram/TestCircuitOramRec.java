@@ -68,6 +68,7 @@ public class TestCircuitOramRec {
 
 		public void run() {
 			try {
+				Flag.countIO = true;
 				listen(port);
 
 				os.write(logN);
@@ -122,6 +123,7 @@ public class TestCircuitOramRec {
 
 		public void run() {
 			try {
+				Flag.countIO = true;
 				connect(host, port);
 
 				int logN = is.read();
@@ -153,6 +155,9 @@ public class TestCircuitOramRec {
 					 
 					if(i != 0) Flag.sw.addCounter();
 				}
+				
+				printStatistic();
+
 				disconnect();
 			} catch (Exception e) {
 				e.printStackTrace();
