@@ -9,7 +9,7 @@ public class TestCircuitOramRecServer {
 		for(int i = 12; i <=20 ; i+=2) {
 			Flag.sw.flush();
 			Flag.countIO = true;
-			GenRunnable gen = new GenRunnable(6550, i, 3, 16384, 8, 6);
+			GenRunnable gen = new GenRunnable(6550, i, 3, 65536, 8, 6);
 			gen.run();
 			Flag.sw.print();
 			System.out.print("\n");
