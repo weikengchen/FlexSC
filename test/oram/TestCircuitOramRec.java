@@ -133,7 +133,7 @@ public class TestCircuitOramRec {
 				int capacity = is.read();
 				int dataSize = is.read();
 
-				dataSize = 4096;
+				dataSize = 16384;
 
 				int N = 1 << logN;
 				System.out
