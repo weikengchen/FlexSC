@@ -7,7 +7,7 @@ import flexsc.Flag;
 public class TestCircuitOramRecClient {
 
 	public  static void main(String args[]) throws Exception {
-		for(int i = 12; i <=20 ; i+=2) {
+		for(int i = 12; i <=20 ; i+=4) {
 			Flag.sw.flush();
 			EvaRunnable eva = new EvaRunnable("52.9.51.202", 6550);
 			eva.run();
