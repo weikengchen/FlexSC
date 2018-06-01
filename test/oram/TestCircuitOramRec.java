@@ -84,6 +84,8 @@ public class TestCircuitOramRec {
 				System.out.println(logN + " " + recurFactor + " " + cutoff
 						+ " " + capacity + " " + dataSize);
 
+				Flag.StopWatch(true);
+
 				@SuppressWarnings("unchecked")
 				CompEnv<GCSignal> env = CompEnv.getEnv(Mode.OPT, Party.Alice, this);
 				RecursiveCircuitOram<GCSignal> client = new RecursiveCircuitOram<GCSignal>(
@@ -142,6 +144,8 @@ public class TestCircuitOramRec {
 						.println("\nlogN recurFactor  cutoff capacity dataSize");
 				System.out.println(logN + " " + recurFactor + " " + cutoff
 						+ " " + capacity + " " + dataSize);
+
+				 Flag.StopWatch(true);
 
 				@SuppressWarnings("unchecked")
 				CompEnv<GCSignal> env = CompEnv.getEnv(Mode.OPT, Party.Bob, this);
