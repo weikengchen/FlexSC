@@ -86,7 +86,7 @@ public class GCGen extends GCGenComp {
 		else if (b.isPublic())
 			res = b.v ? a : new GCSignal(false);
 		else {
-			++numOfAnds;
+			++Flag.sw.ands; ++numOfAnds;
 			GCSignal ret = garble(a, b);
 			gid++;
 			res = ret;
