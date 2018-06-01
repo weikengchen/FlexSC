@@ -84,7 +84,6 @@ public class TestCircuitOramRec {
 				System.out.println(logN + " " + recurFactor + " " + cutoff
 						+ " " + capacity + " " + dataSize);
 
-				Flag.sw.countTime = true;
 
 				@SuppressWarnings("unchecked")
 				CompEnv<GCSignal> env = CompEnv.getEnv(Mode.OPT, Party.Alice, this);
@@ -145,7 +144,6 @@ public class TestCircuitOramRec {
 				System.out.println(logN + " " + recurFactor + " " + cutoff
 						+ " " + capacity + " " + dataSize);
 
-				Flag.sw.countTime = true;
 
 				@SuppressWarnings("unchecked")
 				CompEnv<GCSignal> env = CompEnv.getEnv(Mode.OPT, Party.Bob, this);
