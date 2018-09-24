@@ -39,7 +39,7 @@ public class TestCircuitOramRec {
 		System.out.print("\n");
 	}
 
-	final static int writeCount = 10;
+	final static int writeCount = 1;
 
 	public TestCircuitOramRec() {
 	}
@@ -75,12 +75,15 @@ public class TestCircuitOramRec {
 				os.write(recurFactor);
 				os.write(logCutoff);
 				os.write(capacity);
-				os.write(dataSize);
+				os.write(dataSize % 256);
+				os.write((dataSize % 65536) / 256);
+				os.write(dataSize / 65536);
 				os.flush();
 
 				System.out.println("\nlogN recurFactor  cutoff capacity dataSize");
 				System.out.println(logN + " " + recurFactor + " " + cutoff
 						+ " " + capacity + " " + dataSize);
+
 
 				@SuppressWarnings("unchecked")
 				CompEnv<GCSignal> env = CompEnv.getEnv(Mode.OPT, Party.Alice, this);
@@ -132,14 +135,15 @@ public class TestCircuitOramRec {
 				int cutoff = 1 << logCutoff;
 				int capacity = is.read();
 				int dataSize = is.read();
-
-				dataSize = 65536;
+				dataSize += is.read() * 256;
+				dataSize += is.read() * 65536;
 
 				int N = 1 << logN;
 				System.out
 						.println("\nlogN recurFactor  cutoff capacity dataSize");
 				System.out.println(logN + " " + recurFactor + " " + cutoff
 						+ " " + capacity + " " + dataSize);
+
 
 				@SuppressWarnings("unchecked")
 				CompEnv<GCSignal> env = CompEnv.getEnv(Mode.OPT, Party.Bob, this);
